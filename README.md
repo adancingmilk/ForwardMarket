@@ -1,2 +1,2 @@
 # ForwardMarket
-S5 EFREI Web Project
+Team: LACHAUD Antoine | WU Jacques
