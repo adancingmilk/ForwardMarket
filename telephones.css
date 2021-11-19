@@ -1,0 +1,21 @@
+#logo {
+    width: 20%;
+    background-color: black;
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+}
+
+.prix {
+    text-align: right;
+}
+
+.stockage {
+    text-align: center;
+}
