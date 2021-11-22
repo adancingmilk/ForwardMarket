@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWMarket | iPhone 13</title>
+    <link rel="stylesheet" href="commande.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/FM_miniLogo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li class="nav-item-logo">
+                    <a href="../index.html" class="nav-link">
+                        <img src="../images/FM_Logo.png" id="logo" alt="Logo du site"/>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../telephones.html" class="nav-link">
+                        <span class="nav-title">Téléphones</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../pc.html" class="nav-link">
+                        <span class="nav-title">Ordinateurs</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../apropos.html" class="nav-link">
+                        <span class="nav-title">À Propos</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>>> Commandez un iPhone 13</h1>
+        <div class="container">
+            <form action="confirmation.html" method="get">
+                <div class="couleur">
+                    <label for="couleur-select">Couleur: </label>
+                    <select name="selectionCouleur" id="couleur-select">
+                        <option value="noir">Minuit</option>
+                        <option value="gris">Gris Sidéral</option>
+                        <option value="blanc">Lumière Stellaire</option>
+                        <option value="or">Or</option>
+                    </select>
+                </div>
+                <div class="modele">
+                    <label for="modele-select">Modèle: </label>
+                    <select name="selectionModele" id="modele-select">
+                        <option value="iP13Mini">iPhone 13 Mini</option>
+                        <option value="iP13">iPhone 13</option>
+                        <option value="iP13Pro">iPhone 13 Pro</option>
+                        <option value="iP13ProMax">iPhone 13 Pro Max</option>
+                    </select>
+                </div>
+                <div class="stockage">
+                    <label for="stockage-select">Stockage: </label>
+                    <select name="selectionStockage" id="stockage-select">
+                        <option value="128G">128Go</option>
+                        <option value="256G">256Go</option>
+                        <option value="512G">512Go</option>
+                        <option value="1T">1To</option>
+                    </select>
+                </div>
+                <div class="assurance">
+                    <input type="checkbox" id="assuranceFW" name="assuranceTW">
+                    <label for="assuranceFW">Souscrire à une assurance ForwardMarket+*</label>
+                </div>
+                <div class="valider">
+                    <button type="submit">Valider</button>
+                </div>
+            </form>
+            <img
+                src="../images/iphone13.png"
+                alt="Image iPhone 13"
+                width="100%" />
+        </div>
+    </main>
+
+    <div class="others-bottom">
+        <p>
+            *L'assurance ForwardMaket+ permet de remplacer votre téléphone en cas d'accident ou de défaillance technique (valable pour deux incidents maximum). 
+            Elle est valable deux ans à partir de la réception de la réception de la commande et n'est pas remboursable une fois souscrite.
+            Prix : 109.99€ TTC.
+        </p>
+    </div>
+
+    <footer>
+        <p>Copyright © 2021 | ForwardMarket Corporation. Tous droits réservés</p>
+    </footer>
+</body>
+</html>
