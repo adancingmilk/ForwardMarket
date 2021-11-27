@@ -7,6 +7,7 @@
     <title>Forward Market</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="accueil.css">
 
     <link rel="shortcut icon" href="images/FM_miniLogo.png" />
 
@@ -41,17 +42,62 @@
                 </li>
                 <li class="nav-item">
                     <a href="panier.html" class="nav-link">
-                        <img src="images/Panier_icon.png" id="panier_logo">
+                        <span class="nav-title">Panier</span>
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
-    
+    <div class="wrap-slide">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-boutton" id="banner1">
+                <input type="radio" name="radio-boutton" id="banner2">
+                <input type="radio" name="radio-boutton" id="banner3">
+
+                <div class="premier slide">
+                    <img src="images/promo_iphone_accueil.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="images/banniere_pcportable.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="images/banniere_blackfriday.jpg" alt="">
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="boutton-auto1"></div>
+                    <div class="boutton-auto2"></div>
+                    <div class="boutton-auto3"></div>
+                </div>
+
+                <div class="navigation-manuel">
+                    <label for="banner1" class="boutton-manuel"></label>
+                    <label for="banner2" class="boutton-manuel"></label>
+                    <label for="banner3" class="boutton-manuel"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    var counter = 1;
+    setInterval(function() {
+        document.getElementById('banner' + counter).checked = true;
+        counter++;
+
+        if(counter > 3){
+            counter = 1;
+        }
+    }, 5000);
+    </script>
     <main>
         <h1>Accueil</h1>
         <p>Bienvenue sur ForwardMarket <br>
             Vous trouverez ici les meilleurs prix pour du neuf !</p>
+        <p>
+            Ne tardez pas le black friday à déjà commencé !
+        </p>
     </main>
 
     <footer>
