@@ -51,7 +51,7 @@
     <main>
         <h1>>> Commandez un iPhone 13</h1>
         <div class="container">
-            <form action="confirmation.html" method="post">
+            <form action="confirmation.html" method="get">
                 <div class="couleur">
                     <label class="select-label" for="couleur-select">Couleur: </label>
                     <select name="selectionCouleur" id="couleur-select">
@@ -84,13 +84,17 @@
                     <label for="assuranceFW">Souscrire à une assurance ForwardMarket+*</label>
                 </div>
                 <div class="valider">
-                    <button type="submit" id="btn-valider">Valider</button>
+                    <button type="button" id="btn-valider">Valider</button>
                 </div>
             </form>
             <img
                 src="../images/iphone13.png"
                 alt="Image iPhone 13"
                 width="100%" />
+        </div>
+
+        <div id="container-confirm">
+
         </div>
     </main>
 
@@ -107,8 +111,76 @@
     </footer>
 
     <script>
+        function ajouterConfirmation() {
+            var div_confirm = document.getElementById('container-confirm');
+            if(div_confirm.children.length == 0) { //Vérifie si la div n'a pas déjà été remplie
+                //Ajoute un titre h1
+                var h1_confirm = document.createElement("H1");
+                var t_h1_confirm = document.createTextNode(">> Confirmation de votre commande");
+                h1_confirm.appendChild(t_h1_confirm);
+                div_confirm.appendChild(h1_confirm);
+
+                //Récupération des infos du formulaire
+                const couleur_select = document.getElementById('couleur-select');
+                var str_couleur = couleur_select.options[couleur_select.selectedIndex].text;
+                const modele_select = document.getElementById('modele-select');
+                var str_modele = modele_select.options[modele_select.selectedIndex].text;
+                const stockage_select = document.getElementById('stockage-select');
+                var str_stockage = stockage_select.options[stockage_select.selectedIndex].text;
+
+                var assuranceFW = document.querySelector('#assuranceFW').checked; //Return true or false
+                console.log(assuranceFW);
+
+                //Création du tableau
+                var table_confirm = document.createElement('table');
+                //table_confirm.style.border = "1px solid black";
+
+                var thead = document.createElement('thead');
+                var tr_thead = document.createElement('tr');
+                var tr_th_couleur_fixed = document.createElement('th');
+                tr_th_couleur_fixed.textContent = "Couleur";
+                var tr_th_modele_fixed = document.createElement('th');
+                tr_th_modele_fixed.textContent = "Modèle";
+                var tr_th_stockage_fixed = document.createElement('th');
+                tr_th_stockage_fixed.textContent = "Stockage";
+                var tr_th_assurance_fixed = document.createElement('th');
+                tr_th_assurance_fixed.textContent = "Assurance FW+";
+
+                var tbody = document.createElement('tbody');
+                var tr_tbody = document.createElement('tr');
+                var tr_td_couleur = document.createElement('td');
+                tr_td_couleur.textContent = str_couleur;
+                var tr_td_modele = document.createElement('td');
+                tr_td_modele.textContent = str_modele;
+                var tr_td_stockage = document.createElement('td');
+                tr_td_stockage.textContent = str_stockage;
+                var tr_td_assurance = document.createElement('td');
+                if(assuranceFW) {
+                    tr_td_assurance.textContent = "✅";
+                } else {
+                    tr_td_assurance.textContent = "❌";
+                }
+
+                tr_thead.appendChild(tr_th_couleur_fixed);
+                tr_thead.appendChild(tr_th_modele_fixed);
+                tr_thead.appendChild(tr_th_stockage_fixed);
+                tr_thead.appendChild(tr_th_assurance_fixed);
+                thead.appendChild(tr_thead);
+                table_confirm.appendChild(thead);
+
+                tr_tbody.appendChild(tr_td_couleur);
+                tr_tbody.appendChild(tr_td_modele);
+                tr_tbody.appendChild(tr_td_stockage);
+                tr_tbody.appendChild(tr_td_assurance);
+                tbody.appendChild(tr_tbody);
+                table_confirm.appendChild(tbody);
+
+                div_confirm.appendChild(table_confirm);
+            }
+        }
+
         document.getElementById('btn-valider').onclick = function() {
-            
+            ajouterConfirmation();
         }
     </script>
 </body>
