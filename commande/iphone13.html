@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="commande.js"></script>
 </head>
 <body>
     <header>
@@ -49,7 +51,7 @@
     <main>
         <h1>>> Commandez un iPhone 13</h1>
         <div class="container">
-            <form action="confirmation.html" method="get">
+            <form action="confirmation.html" method="post">
                 <div class="couleur">
                     <label class="select-label" for="couleur-select">Couleur: </label>
                     <select name="selectionCouleur" id="couleur-select">
@@ -82,7 +84,7 @@
                     <label for="assuranceFW">Souscrire à une assurance ForwardMarket+*</label>
                 </div>
                 <div class="valider">
-                    <button type="submit">Valider</button>
+                    <button type="submit" id="btn-valider">Valider</button>
                 </div>
             </form>
             <img
@@ -103,5 +105,11 @@
     <footer>
         <p>Copyright © 2021 | ForwardMarket Corporation. Tous droits réservés</p>
     </footer>
+
+    <script>
+        document.getElementById('btn-valider').onclick = function() {
+            
+        }
+    </script>
 </body>
 </html>
