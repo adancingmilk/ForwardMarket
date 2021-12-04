@@ -6,6 +6,11 @@ table {
     align-items: center;
     border: 1px solid black;
 }
+
 th {
     border: 1px solid black;
+}
+
+td {
+    text-align: center;
 }

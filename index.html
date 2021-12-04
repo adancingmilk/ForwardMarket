@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,14 +16,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<!-- Barre de navigation -->
+    <!-- Barre de navigation -->
     <header>
         <nav class="nav">
             <ul class="nav-menu">
                 <li class="nav-item-logo">
                     <a href="index.html" class="nav-link">
-                        <img src="images/FM_Logo.png" id="logo" alt="Logo du site"/>
+                        <img src="images/FM_Logo.png" id="logo" alt="Logo du site" />
                     </a>
                 </li>
                 <li class="nav-item">
@@ -42,17 +44,16 @@
                 </li>
                 <li class="nav-item">
                     <a href="panier.html" class="nav-link">
-                        <span class="nav-title">Panier</span>
+                        <span class="nav-title">Panier</span><span id="nbPanier">(0)</span>
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
-<!-- Fin de la barre de navigation -->
+    <!-- Fin de la barre de navigation -->
     <main>
         <h1>Accueil</h1>
-        <p>Bienvenue sur ForwardMarket <br>
-            Vous trouverez ici les meilleurs prix pour du neuf !</p>
+        <p>Bienvenue sur ForwardMarket <br> Vous trouverez ici les meilleurs prix pour du neuf !</p>
         <p>
             Ne tardez pas le black friday à déjà commencé !
         </p>
@@ -90,19 +91,20 @@
     </div>
 
     <script type="text/javascript">
-    var counter = 1;
-    setInterval(function() {
-        document.getElementById('banner' + counter).checked = true;
-        counter++;
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById('banner' + counter).checked = true;
+            counter++;
 
-        if(counter > 3){
-            counter = 1;
-        }
-    }, 5000);
+            if (counter > 3) {
+                counter = 1;
+            }
+        }, 5000);
     </script>
-
+    <script src="js/script.js"></script>
     <footer>
         <p>Copyright © 2021 | ForwardMarket Corporation. Tous droits réservés</p>
     </footer>
 </body>
+
 </html>
