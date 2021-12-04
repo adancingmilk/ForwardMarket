@@ -5,15 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FWMarket | iPhone 13</title>
-    <link rel="stylesheet" href="commande.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="css/commande.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../images/FM_miniLogo.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
-
-    <script type="text/javascript" src="commande.js"></script>
 </head>
 <body>
     <header>
@@ -41,7 +39,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="../panier.html" class="nav-link">
-                        <span class="nav-title">Panier</span>
+                        <span class="nav-title">Panier</span><span id="nbPanier">(0)</span>
                     </a>
                 </li>
             </ul>
@@ -84,7 +82,7 @@
                     <label for="assuranceFW">Souscrire à une assurance ForwardMarket+*</label>
                 </div>
                 <div class="valider">
-                    <button type="button" id="btn-valider">Valider</button>
+                    <button type="button" id="btn-ajout">Ajouter au panier</button>
                 </div>
             </form>
             <img
@@ -113,7 +111,7 @@
     <script>
         function ajouterConfirmation() {
             var div_confirm = document.getElementById('container-confirm');
-            if(div_confirm.children.length == 0) { //Vérifie si la div n'a pas déjà été remplie
+            if(div_confirm.children.length === 0) { //Vérifie si la div n'a pas déjà été remplie
                 //Ajoute un titre h1
                 var h1_confirm = document.createElement("H1");
                 var t_h1_confirm = document.createTextNode(">> Confirmation de votre commande");
@@ -137,21 +135,23 @@
 
                 var thead = document.createElement('thead');
                 var tr_thead = document.createElement('tr');
-                var tr_th_couleur_fixed = document.createElement('th');
-                tr_th_couleur_fixed.textContent = "Couleur";
                 var tr_th_modele_fixed = document.createElement('th');
                 tr_th_modele_fixed.textContent = "Modèle";
+                var tr_th_couleur_fixed = document.createElement('th');
+                tr_th_couleur_fixed.textContent = "Couleur";
                 var tr_th_stockage_fixed = document.createElement('th');
                 tr_th_stockage_fixed.textContent = "Stockage";
                 var tr_th_assurance_fixed = document.createElement('th');
                 tr_th_assurance_fixed.textContent = "Assurance FW+";
+                var tr_th_quantite_fixed = document.createElement('th');
+                tr_th_quantite_fixed.textContent = "Quantité";
 
                 var tbody = document.createElement('tbody');
                 var tr_tbody = document.createElement('tr');
-                var tr_td_couleur = document.createElement('td');
-                tr_td_couleur.textContent = str_couleur;
                 var tr_td_modele = document.createElement('td');
                 tr_td_modele.textContent = str_modele;
+                var tr_td_couleur = document.createElement('td');
+                tr_td_couleur.textContent = str_couleur;
                 var tr_td_stockage = document.createElement('td');
                 tr_td_stockage.textContent = str_stockage;
                 var tr_td_assurance = document.createElement('td');
@@ -160,18 +160,24 @@
                 } else {
                     tr_td_assurance.textContent = "❌";
                 }
+                var tr_td_quantite = document.createElement('td');
+                tr_td_quantite.textContent = "1";
 
-                tr_thead.appendChild(tr_th_couleur_fixed);
+
                 tr_thead.appendChild(tr_th_modele_fixed);
+                tr_thead.appendChild(tr_th_couleur_fixed);
                 tr_thead.appendChild(tr_th_stockage_fixed);
                 tr_thead.appendChild(tr_th_assurance_fixed);
+                tr_thead.appendChild(tr_th_quantite_fixed);
                 thead.appendChild(tr_thead);
                 table_confirm.appendChild(thead);
 
-                tr_tbody.appendChild(tr_td_couleur);
+
                 tr_tbody.appendChild(tr_td_modele);
+                tr_tbody.appendChild(tr_td_couleur);
                 tr_tbody.appendChild(tr_td_stockage);
                 tr_tbody.appendChild(tr_td_assurance);
+                tr_tbody.appendChild(tr_td_quantite);
                 tbody.appendChild(tr_tbody);
                 table_confirm.appendChild(tbody);
 
@@ -179,9 +185,10 @@
             }
         }
 
-        document.getElementById('btn-valider').onclick = function() {
+        document.getElementById('btn-ajout').onclick = function() {
             ajouterConfirmation();
         }
     </script>
+    <script type="text/javascript" src="js/commande.js"></script>
 </body>
 </html>

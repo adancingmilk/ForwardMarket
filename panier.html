@@ -5,16 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forward Market - Panier</title>
-
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/panier.css">
     <link rel="shortcut icon" href="images/FM_miniLogo.png" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<!-- Barre de navigation -->
+<header>
+    <nav class="nav">
+        <ul class="nav-menu">
+            <li class="nav-item-logo">
+                <a href="index.html" class="nav-link">
+                    <img src="images/FM_Logo.png" id="logo" alt="Logo du site"/>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="telephones.html" class="nav-link">
+                    <span class="nav-title">Téléphones</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="pc.html" class="nav-link">
+                    <span class="nav-title">Ordinateurs</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="apropos.html" class="nav-link">
+                    <span class="nav-title">À Propos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="panier.html" class="nav-link">
+                    <span class="nav-title">Panier</span><span id="nbPanier">(0)</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<!-- Fin de la barre de navigation -->
+<table class = "Panier">
+    <tr class="Produit-header">
+        <th>Modèle</th>
+        <th>Couleur</th>
+        <th>Stockage</th>
+        <th>Prix</th>
+    </tr>
+</table>
+<script src="js/panier.js"></script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+table {
+    margin-top: 10rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    width: 95%;
+    align-items: center;
+    border: 1px solid black;
+}
+th {
+    border: 1px solid black;
+}
