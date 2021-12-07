@@ -30,3 +30,56 @@ td, th {
     color: white;
     padding: 1em;
 }
+
+.contentPhone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.subContentPhone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 3em;
+}
+
+.textPhone {
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+}
+
+.imgPhone {
+    width: 60%;
+    height: fit-content;
+}
+
+.firstLine {
+    font-weight: bold;
+}
+
+.nextLine, .lastLine {
+    margin-bottom: 1em;
+}
+
+.lastLine {
+    font-style: italic;
+    font-size: smaller;
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+}
