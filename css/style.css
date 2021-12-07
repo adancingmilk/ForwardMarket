@@ -74,6 +74,8 @@ main {
 }
 #nbPanier {
     margin-left: 5px;
+    color: black;
+    font-family: 'Shippori Antique', serif;
 }
 
 footer {
