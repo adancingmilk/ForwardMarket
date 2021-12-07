@@ -7,7 +7,7 @@
 
 .select-label {
     display: inline-block;
-    width: 80px;
+    width: auto;
 }
 
 .valider {
@@ -31,4 +31,37 @@ td, th {
     border: 1px solid black;
     text-align: center;
     padding: 1em;
+}
+#btn-ajout {
+    padding: 1rem 3rem;
+    background: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    will-change: transform;
+    min-width: 150px;
+    margin : 0 auto 50px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 10px;
+    font-family: 'Shippori Antique', serif;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.couleur,.modele, .stockage, .assurance {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+#modele-select, #stockage-select, #couleur-select {
+    margin-left: 3rem;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    width: 15rem;
+    background-color: lightgrey;
 }
