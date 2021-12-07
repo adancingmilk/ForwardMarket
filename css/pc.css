@@ -1,0 +1,51 @@
+.macbook {
+    margin-bottom: 5em;
+}
+
+.contentMacbook {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.textMacbook {
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+}
+
+.subContentMacbook {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 3em;
+}
+
+.imgMacs {
+    width: 60%;
+    height: fit-content;
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+}
+
+.firstLineMacs {
+    font-weight: bold;
+}
+
+.thirdLineMacs {
+    margin-bottom: 1em;
+}
