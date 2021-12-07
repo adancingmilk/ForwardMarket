@@ -1,21 +1,21 @@
-.macbook {
+.macbook, .zenbook, .laptop4 {
     margin-bottom: 5em;
 }
 
-.contentMacbook {
+.contentMacbook, .contentZenbook, .contentLaptop4 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.textMacbook {
+.textMacbook, .textZenbook, .textLaptop4 {
     display: flex;
     flex-direction: column;
     width: 30em;
 }
 
-.subContentMacbook {
+.subContentMacbook, .subContentZenbook, .subContentLaptop4 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,7 +23,7 @@
     margin-bottom: 3em;
 }
 
-.imgMacs {
+.imgMacs, .imgZenbooks, .imgLaptop4 {
     width: 60%;
     height: fit-content;
 }
@@ -42,10 +42,10 @@ td, th {
     text-align: center;
 }
 
-.firstLineMacs {
+.firstLine {
     font-weight: bold;
 }
 
-.thirdLineMacs {
+.thirdLine {
     margin-bottom: 1em;
 }
