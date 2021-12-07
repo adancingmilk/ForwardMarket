@@ -19,10 +19,10 @@ function nbElementPanier(produit) {
     nb = parseInt(nb);
     if (nb) {
         localStorage.setItem('nbElements', nb + 1);
-        document.querySelector('#nbPanier').textContent = nb + 1;
+        document.querySelector('#nbPanier').textContent = `(${nb+1})`;
     } else {
         localStorage.setItem('nbElements', 1);
-        document.querySelector('#nbPanier').textContent = 1;
+        document.querySelector('#nbPanier').textContent = `(${1})`;
     }
     setItems(produit);
 }
