@@ -1,0 +1,25 @@
+main {
+    margin-right: 4em;
+}
+
+.aboutImages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentCreateur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgCreateur1, .imgCreateur2 {
+    width: 50%;
+}
+
+.desc {
+    font-size: small;
+}
