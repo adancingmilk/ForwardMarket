@@ -66,7 +66,7 @@ td, th {
     margin-bottom: 1em;
 }
 
-.lastLine {
+.lastLine, .ruptureStock {
     font-style: italic;
     font-size: smaller;
 }
@@ -83,4 +83,38 @@ td, th {
     padding-left: 40px;
     padding-right: 40px;
     text-align: center;
+}
+
+@media screen and (max-width: 428px) {
+    .subContentPhone {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 3em;
+    }
+
+    td, th {
+        border: 1px solid black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+
+    .textPhone {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .imgPhone {
+        width: 100%;
+        height: fit-content;
+    }
+
+    h1, h2, h3 {
+        text-align: center;
+    }
 }

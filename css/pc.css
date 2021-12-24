@@ -55,3 +55,41 @@ td, th {
     font-style: italic;
     font-size: smaller;
 }
+
+@media screen and (max-width: 428px) {
+    .subContentPC {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 3em;
+    }
+
+    td, th {
+        border: 1px solid black;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 7px;
+        padding-right: 7px;
+        text-align: center;
+    }
+
+    .tableOtherPC {
+        display: none;
+    }
+
+    .textPC {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .imgPC {
+        width: 100%;
+        height: fit-content;
+    }
+
+    h1, h2, h3 {
+        text-align: center;
+    }
+}
