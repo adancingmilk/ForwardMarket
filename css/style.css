@@ -88,11 +88,24 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-footer p {
+footer div {
     font-size: small;
     text-align: center;
+}
+
+.copyrightText {
+    margin-top: 1em;
+}
+
+.divAboutUs {
+    margin-bottom: 1em;
+}
+
+.linkAboutUs {
+    text-decoration: underline black;
 }
 
 @media screen and (max-width: 428px) {
@@ -126,6 +139,7 @@ footer p {
     }
 
     .navToggle {
+        display: block;
         position: absolute;
         cursor: pointer;
         margin: 0rem 1rem;
