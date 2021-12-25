@@ -93,3 +93,30 @@
 #banner3:checked ~ .navigation-auto .boutton-auto3{
     background: black;
 }
+
+
+.productContainer, .subProductContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.productDetail, .productContainerPC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.productPic1, .productPCPic {
+    width: 90%;
+}
+
+.productPic2 {
+    width: 50%;
+}
+
+.productPic3, .productPCPic3 {
+    width: 100%;
+}
