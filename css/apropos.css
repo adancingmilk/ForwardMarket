@@ -24,7 +24,7 @@ main {
     font-size: small;
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 500px) {
     main {
         margin-right: 0;
     }

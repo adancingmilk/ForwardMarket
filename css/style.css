@@ -22,10 +22,6 @@ main {
     box-shadow: rgba(12, 43, 30, 0.2) 0 4px 14px;
 }
 
-.nav:hover {
-    height: 5rem;
-}
-
 .nav-menu {
     list-style: none;
     padding: 0;
@@ -53,22 +49,6 @@ main {
     height: 5rem;
     width: 100%;
     text-decoration: none;
-}
-
-.navToggle{
-    display: flex;
-    float: right;
-    margin-top: 10px;
-    margin-right: 40px;
-    cursor: pointer;
-}
-
-.navCheckbox, .navToggle {
-    display: none;
-}
-
-#menuIcon {
-    height: 3rem;
 }
 
 .nav-title {
@@ -138,12 +118,15 @@ footer div {
     body {
         font-size: 10px;
     }
+    .nav {
+        height: 3rem;
+    }
+    .nav-link{
+        height: 3rem;
+    }
+    #logo{
+        height: 3rem;
+    }
 
-    .nav-item , .nav-second-item{
-        display: none;
-    }
-    .navToggle {
-        display: block;
-    }
 
 }

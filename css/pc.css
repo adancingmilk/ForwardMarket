@@ -31,6 +31,7 @@
 table {
     border: 2px solid black;
     border-collapse: collapse;
+    width: 90%;
 }
 
 td, th {
@@ -56,7 +57,7 @@ td, th {
     font-size: smaller;
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 500px) {
     .subContentPC {
         display: flex;
         align-items: center;

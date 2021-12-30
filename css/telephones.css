@@ -74,6 +74,7 @@ td, th {
 table {
     border: 2px solid black;
     border-collapse: collapse;
+    width: 100%;
 }
 
 td, th {
@@ -85,7 +86,7 @@ td, th {
     text-align: center;
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 500px) {
     .subContentPhone {
         display: flex;
         align-items: center;
