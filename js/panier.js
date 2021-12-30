@@ -10,6 +10,8 @@ function displayPanier() {
             <td> ${item.couleur}</td>
             <td> ${item.stockage}</td>
             <td> ${item.dansPanier}</td>
+            <td> assurance </td>
+            <td> <img src="../images/cross_icon.png" class="btn-supprimer" alt="Logo du supprimer" /> </td>
             </tr>`;
         });
     }

@@ -1,16 +1,10 @@
-table {
-    margin-top: 10rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
-    width: 95%;
-    align-items: center;
-    border: 1px solid black;
+#delete {
+    padding : 10px;
+    background-color: #ff5959;
+
 }
 
-th {
-    border: 1px solid black;
-}
-
-td {
-    text-align: center;
+.btn-supprimer {
+    width: 32px;
+    cursor: pointer;
 }

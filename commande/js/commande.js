@@ -3,6 +3,7 @@ let produit = {
     modele: document.getElementById('modele-select').value,
     couleur: document.getElementById('couleur-select').value,
     stockage: document.getElementById('stockage-select').value,
+    assurance: document.querySelector('#assuranceFW').checked,
     dansPanier: 0
 };
 
@@ -10,6 +11,7 @@ cart.addEventListener('click', () => {
     produit.modele = document.getElementById('modele-select').value;
     produit.couleur = document.getElementById('couleur-select').value;
     produit.stockage = document.getElementById('stockage-select').value;
+    produit.assurance = document.querySelector('#assuranceFW').checked;
     nbElementPanier(produit);
     CoutTotal(produit);
 })

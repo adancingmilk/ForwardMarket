@@ -21,17 +21,6 @@
     width: 300px;
 }
 
-table {
-    border: 2px solid black;
-    border-collapse: collapse;
-    margin-left: 25%;
-}
-
-td, th {
-    border: 1px solid black;
-    text-align: center;
-    padding: 1em;
-}
 #btn-ajout {
     padding: 1rem 3rem;
     background: white;

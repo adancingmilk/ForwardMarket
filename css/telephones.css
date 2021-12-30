@@ -1,15 +1,3 @@
-table {
-    border: 2px solid black;
-    border-collapse: collapse;
-}
-
-td, th {
-    border: 1px solid black;
-}
-
-.prix {
-    text-align: right;
-}
 
 .stockage {
     text-align: center;
@@ -71,21 +59,6 @@ td, th {
     font-size: smaller;
 }
 
-table {
-    border: 2px solid black;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    border: 1px solid black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-    text-align: center;
-}
-
 @media screen and (max-width: 500px) {
     .subContentPhone {
         display: flex;
@@ -96,7 +69,6 @@ td, th {
     }
 
     td, th {
-        border: 1px solid black;
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 10px;
