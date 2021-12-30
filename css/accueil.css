@@ -120,3 +120,90 @@
 .productPic3, .productPCPic3 {
     width: 100%;
 }
+
+@media screen and (max-width: 1000px) {
+    .slider{
+        width: 500px;
+        height: 300px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .slides{
+        width: 500%;
+        height: 300px;
+        display: flex;
+    }
+
+    .slide img{
+        width: 500px;
+        height: 300px;
+    }
+
+    .navigation-manuel{
+        position: absolute;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        margin-top: 310px;
+    }
+
+    .boutton-manuel:not(:last-child){
+        margin-right: 25px;
+    }
+
+    .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 500px;
+        justify-content: center;
+        margin-top: 310px;
+    }
+
+    .navigation-auto div:not(:last-child){
+        margin-right: 25px;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .slider{
+        width: 250px;
+        height: 150px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .slides{
+        width: 500%;
+        height: 150px;
+        display: flex;
+    }
+
+    .slide img{
+        width: 250px;
+        height: 150px;
+    }
+
+    .navigation-manuel{
+        position: absolute;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        margin-top: 155px;
+    }
+
+    .boutton-manuel:not(:last-child){
+        margin-right: 13px;
+    }
+
+    .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 250px;
+        justify-content: center;
+        margin-top: 155px;
+    }
+
+    .navigation-auto div:not(:last-child){
+        margin-right: 13px;
+    }
+
+}

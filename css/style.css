@@ -8,8 +8,8 @@ body {
 main {
     padding: 1rem;
     margin-left: 5rem;
-    margin-top: 4rem;
     margin-right: 5rem;
+    margin-top: 4rem;
     text-align: justify;
 }
 
@@ -55,11 +55,27 @@ main {
     text-decoration: none;
 }
 
+.navToggle{
+    display: flex;
+    float: right;
+    margin-top: 10px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.navCheckbox, .navToggle {
+    display: none;
+}
+
+#menuIcon {
+    height: 3rem;
+}
+
 .nav-title {
     color: black;
 }
 
-#logo {
+#logo{
     height: 5rem;
     background-color: black;
 }
@@ -68,15 +84,12 @@ main {
     width: 20%;
 }
 
-.navCheckbox, .navToggle {
-    display: none;
-}
-
 .others-bottom {
     background-color: black;
     color: white;
     padding: 1em;
 }
+
 #nbPanier {
     margin-left: 5px;
     color: black;
@@ -109,101 +122,28 @@ footer div {
     text-decoration: underline black;
 }
 
-@media screen and (max-width: 428px) {
-    .nav {
-        height: 3.5rem;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        background: white;
-        box-shadow: rgba(12, 43, 30, 0.2) 0 4px 14px;
+@media screen and (max-width: 1000px) {
+    html,
+    body {
+        font-size: 14px;
     }
-    
-    .nav-menu {
-        list-style: none;
-        padding: 0;
-        margin: 0rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-menu:last-child {
-        box-shadow: rgba(12, 43, 30, 0.2) 0 4px 14px;
-    }
-
     main {
-        padding: 1rem;
-        margin-left: 0rem;
-        margin-top: 4rem;
-        text-align: justify;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    html,
+    body {
+        font-size: 10px;
     }
 
+    .nav-item , .nav-second-item{
+        display: none;
+    }
     .navToggle {
         display: block;
-        position: absolute;
-        cursor: pointer;
-        margin: 0rem 1rem;
-        right: 0;
     }
 
-    .nav-second-item {
-        margin-top: 2em;
-    }
-
-    .nav-item, .nav-second-item {
-        padding-left: 0rem;
-        padding-bottom: 2em;
-        width: 100%;
-        display: none;
-    }
-
-    .nav-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 1.5rem;
-        width: 100%;
-        font-size: 1.5rem;
-    }
-
-    #logo {
-        padding-top: 1.5rem;
-        height: 4rem;
-        background-color: black;
-    }
-    
-    .menuIcon, .closeIcon {
-        width: 50px;
-    }
-    
-    .closeIcon {
-        display: none;
-    }
-    
-    .menuIcon {
-        margin-top: 0.2rem;
-    }
-    
-    .navCheckbox {
-        display: none;
-    }
-
-    #navCheckbox:checked ~ ul.nav-menu li {
-        display: block;
-        background-color: white;
-    }
-
-    #navCheckbox:checked ~ ul.nav-menu .nav-menu:last-child {
-        display: block;
-        background-color: white;
-    }
-
-    #navCheckbox:checked ~ label.navToggle .closeIcon {
-        display: block;
-    }
-
-    #navCheckbox:checked ~ label.navToggle .menuIcon {
-        display: none;
-    }
 }
