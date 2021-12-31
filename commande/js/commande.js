@@ -1,4 +1,8 @@
 let cart = document.querySelector('#btn-ajout');
+let len = localStorage.getItem('ProduitDansPanier');
+len = JSON.parse(len);
+let index = len === null ? 0 : len.length;
+
 let produit = {
     modele: document.getElementById('modele-select').value,
     couleur: document.getElementById('couleur-select').value,
@@ -26,29 +30,41 @@ function nbElementPanier(produit) {
         localStorage.setItem('nbElements', 1);
         document.querySelector('#nbPanier').textContent = `(${1})`;
     }
-    setItems(produit);
+    verifItem(produit);
 }
-
-function setItems(produit) {
+function verifItem(produit){
     let cartItems = localStorage.getItem('ProduitDansPanier');
+    let trouver = false;
     cartItems = JSON.parse(cartItems);
-    if (cartItems != null) {
-        if (cartItems[produit.modele + produit.couleur + produit.stockage] === undefined) {
+    if (cartItems != null){
+        for (const [key, value] of Object.entries(cartItems)){
+            if (estMemeProduit(value,produit)){
+                cartItems[key].dansPanier += 1;
+                trouver = true;
+                break
+            }
+        }
+        if (!trouver){
             cartItems = {
                 ...cartItems,
-                [produit.modele + produit.couleur + produit.stockage]: produit
+                [index]: produit
             }
             produit.dansPanier = 1;
-        } else {
-            cartItems[produit.modele + produit.couleur + produit.stockage].dansPanier += 1;
-        }
-    } else {
-        produit.dansPanier = 1;
-        cartItems = {
-            [produit.modele + produit.couleur + produit.stockage]: produit
+            index += 1;
         }
     }
+    else {
+        produit.dansPanier = 1;
+        cartItems = {
+            [index] : produit
+        }
+        index += 1;
+    }
     localStorage.setItem("ProduitDansPanier", JSON.stringify(cartItems));
+}
+
+function estMemeProduit(produitA, produitB){
+    return (produitA.modele === produitB.modele && produitA.couleur === produitB.couleur && produitA.stockage === produitB.stockage && produitA.assurance === produitB.assurance)
 }
 
 //On doit ajouter les prix de chaque modèle afin de pouvoir afficher un panier complet
