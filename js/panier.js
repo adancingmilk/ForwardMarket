@@ -22,15 +22,20 @@ function displayPanier() {
 var suppr = (i) => {
     btns_suppr.item(i).parentNode.parentNode.parentNode.remove(); //un tbody sorti de nul part
     let cartItems = localStorage.getItem("ProduitDansPanier");
+    let nb = localStorage.getItem('nbElements');
     cartItems = JSON.parse(cartItems);
+    nb = JSON.parse(nb);
+    nb -= cartItems[i].dansPanier;
+
     delete cartItems[i];
     console.log(i);
     console.log(cartItems);
     localStorage.setItem("ProduitDansPanier", JSON.stringify(cartItems));
+    localStorage.setItem("nbElements", JSON.stringify(nb));
 };
 
 displayPanier();
 
 for (let i = 0; i < btns_suppr.length; i++) {
-    btns_suppr.item(i).addEventListener('click', suppr.bind(event, i),false);
+    btns_suppr.item(i).addEventListener('click', suppr.bind(i),false);
 }
