@@ -1,7 +1,7 @@
 let cart = document.querySelector('#btn-ajout');
 let len = localStorage.getItem('ProduitDansPanier');
 len = JSON.parse(len);
-let index = len === null ? 0 : len.length;
+let index = len === null ? 0 : Object.keys(len).length;
 
 let produit = {
     modele: document.getElementById('modele-select').value,
@@ -16,6 +16,12 @@ cart.addEventListener('click', () => {
     produit.couleur = document.getElementById('couleur-select').value;
     produit.stockage = document.getElementById('stockage-select').value;
     produit.assurance = document.querySelector('#assuranceFW').checked;
+    if (produit.assurance){
+        produit.assurance = "Oui";
+    }
+    else {
+        produit.assurance = "Non";
+    }
     nbElementPanier(produit);
     CoutTotal(produit);
 })
