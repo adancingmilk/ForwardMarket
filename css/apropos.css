@@ -18,9 +18,11 @@ main {
 
 .imgCreateur1, .imgCreateur2 {
     width: 50%;
+    margin: 1rem;
 }
 
 .desc {
+    margin: 10px;
     font-size: small;
 }
 
