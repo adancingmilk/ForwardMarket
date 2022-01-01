@@ -17,38 +17,27 @@ function displayPanier() {
         });
     }
 }
-function suppr(i){
-    let cartItems = localStorage.getItem("ProduitDansPanier");
-    let nb = localStorage.getItem('nbElements');
-    cartItems = JSON.parse(cartItems);
-    nb = JSON.parse(nb);
-    nb -= cartItems[i].dansPanier;
-
-    delete cartItems[i];
-    console.log(i);
-    console.log(cartItems);
-    localStorage.setItem("ProduitDansPanier", JSON.stringify(cartItems));
-    localStorage.setItem("nbElements", JSON.stringify(nb));
-}
 
 displayPanier();
+
+let cartItems = localStorage.getItem("ProduitDansPanier");
+cartItems = JSON.parse(cartItems);
+let dicoclef = Object.keys(cartItems); //récupère les clefs du dictionnaire du panier
 
 for (let i = 0; i < btns_suppr.length; i++) {
     btns_suppr.item(i).addEventListener('click', ()=>{
         btns_suppr.item(i).parentNode.parentNode.parentNode.remove(); //un tbody sorti de nul part
         let cartItems = localStorage.getItem("ProduitDansPanier");
         cartItems = JSON.parse(cartItems);
-
-        let dicoclef = Object.keys(cartItems);
-        i = dicoclef[i];
-
+        const j = dicoclef[i];
+        console.log(i);
+        console.log(j);
         let nb = localStorage.getItem('nbElements');
         nb = parseInt(nb);
-        localStorage.setItem('nbElements', nb - cartItems[i].dansPanier);
-        document.querySelector('#nbPanier').textContent = `(${nb - cartItems[i].dansPanier})`;
+        localStorage.setItem('nbElements', nb - cartItems[j].dansPanier);
+        document.querySelector('#nbPanier').textContent = `(${nb - cartItems[j].dansPanier})`;
 
-        delete cartItems[i];
-        console.log(i);
+        delete cartItems[j];
         console.log(cartItems);
         localStorage.setItem("ProduitDansPanier", JSON.stringify(cartItems));
 
