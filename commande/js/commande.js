@@ -34,7 +34,7 @@ cart.addEventListener('click', () => {
     CoutTotal(produit);
 })
 choixcouleur.addEventListener('change',()=>{
-    var phoneimg = document.getElementById('phoneimg');
+    const phoneimg = document.getElementById('phoneimg');
     switch (choixcouleur.value) {
         case 'Noir':
             phoneimg.src = "../images/iphone13-noir.png";
