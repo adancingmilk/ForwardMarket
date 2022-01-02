@@ -34,22 +34,28 @@ cart.addEventListener('click', () => {
     CoutTotal(produit);
 })
 choixcouleur.addEventListener('change',()=>{
-    const phoneimg = document.getElementById('phoneimg');
+    const blackphoneimg = document.getElementById('blackphone');
+    const greyphoneimg = document.getElementById('greyphone');
+    const whitephoneimg = document.getElementById('whitephone');
+    const goldphoneimg = document.getElementById('goldphone');
+    blackphoneimg.style.display ="none";
+    greyphoneimg.style.display ="none";
+    whitephoneimg.style.display ="none";
+    goldphoneimg.style.display ="none";
     switch (choixcouleur.value) {
         case 'Noir':
-            phoneimg.src = "../images/iphone13-noir.png";
+            blackphoneimg.style.display = "block";
             break;
         case 'Gris':
-            phoneimg.src = "../images/iphone13-pro-gris.png";
+            greyphoneimg.style.display = "block";
             break;
         case 'Blanc':
-            phoneimg.src = "../images/iphone13-starlight.png";
+            whitephoneimg.style.display = "block";
             break;
         case 'Or':
-            phoneimg.src = "../images/iphone13-gold.jpg";
+            goldphoneimg.style.display = "block";
             break;
     }
-    document.getElementById('phoneimg').innerHTML = phoneimg;
 })
 for (let i = 0; i < selects.length; i++) {
     selects.item(i).addEventListener('change', () => {

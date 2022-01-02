@@ -63,6 +63,12 @@ form {
     background-color: lightgrey;
 }
 
+.phoneimg {
+    display: none;
+}
+#blackphone {
+    display: block;
+}
 @media screen and (max-width: 500px) {
     .container {
         flex-direction: column;
