@@ -29,7 +29,6 @@ cart.addEventListener('click', () => {
     else {
         produit.assurance = "Non";
     }
-
     nbElementPanier(produit);
     CoutTotal(produit);
 })

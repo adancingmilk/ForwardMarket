@@ -3,6 +3,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5rem;
 }
 
 .select-label {
@@ -45,7 +46,7 @@
 }
 
 form {
-    margin-top: 3rem;
+    margin-top: 15rem;
 }
 
 .couleur,.modele, .stockage, .assurance {
@@ -68,6 +69,12 @@ form {
 }
 #blackphone {
     display: block;
+}
+.phoneprix {
+    margin-left: 2rem;
+}
+#btn-ajout {
+    margin-top: 5rem;
 }
 @media screen and (max-width: 500px) {
     .container {
