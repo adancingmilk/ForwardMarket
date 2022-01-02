@@ -2,6 +2,7 @@ let cart = document.querySelector('#btn-ajout');
 let selects = document.getElementsByClassName("selecteur");
 let choixmodele = document.getElementById('modele-select');
 let choixstock = document.getElementById('stockage-select');
+let choixcouleur = document.getElementById('couleur-select');
 let len = localStorage.getItem('ProduitDansPanier');
 len = JSON.parse(len);
 let index = len === null ? 0 : Object.keys(len).length;
@@ -32,7 +33,24 @@ cart.addEventListener('click', () => {
     nbElementPanier(produit);
     CoutTotal(produit);
 })
-
+choixcouleur.addEventListener('change',()=>{
+    var phoneimg = document.getElementById('phoneimg');
+    switch (choixcouleur.value) {
+        case 'Noir':
+            phoneimg.src = "../images/iphone13-noir.png";
+            break;
+        case 'Gris':
+            phoneimg.src = "../images/iphone13-pro-gris.png";
+            break;
+        case 'Blanc':
+            phoneimg.src = "../images/iphone13-starlight.png";
+            break;
+        case 'Or':
+            phoneimg.src = "../images/iphone13-gold.jpg";
+            break;
+    }
+    document.getElementById('phoneimg').innerHTML = phoneimg;
+})
 for (let i = 0; i < selects.length; i++) {
     selects.item(i).addEventListener('change', () => {
 
