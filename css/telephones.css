@@ -23,8 +23,23 @@
     flex-direction: row;
     margin-bottom: 3em;
 }
-button{
-    position: center;
+
+.commander {
+    padding: 1rem 3rem;
+    background: white;
+    text-align: center;
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    margin : 0 auto 50px;
+    border: none;
+    width: fit-content;
+    text-decoration: none;
+    cursor: pointer;
+    background-size: cover;
+    border-radius: 10px;
+    font-family: 'Shippori Antique', serif;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .textPhone {

@@ -116,7 +116,7 @@ a:active { text-decoration: none; }
 }
 
 table{
-    margin: 7rem 2rem;
+    margin: 3rem 2rem;
     width: 95%;
     text-align: center;
     align-items: center;
@@ -153,6 +153,7 @@ tbody tr{
     background-color: #ffffff;
     border-bottom: 1px solid #f2f2f2;
 }
+
 button{
     padding: 1rem 3rem;
     background: white;
@@ -171,6 +172,7 @@ button{
     font-family: 'Shippori Antique', serif;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
+
 @media screen and (max-width: 1000px) {
     html,
     body {
