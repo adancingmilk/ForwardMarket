@@ -1,20 +1,23 @@
 let btns_suppr = document.getElementsByClassName("btn-supprimer");
-
+let prixTotal = 0;
 function displayPanier() {
     let cartItems = localStorage.getItem("ProduitDansPanier");
     cartItems = JSON.parse(cartItems);
     let ItemProduit = document.querySelector(".Panier");
     if (cartItems && ItemProduit) {
         Object.values(cartItems).map(item => {
+            prixTotal += parseInt(item.prix)*parseInt(item.dansPanier);
             ItemProduit.innerHTML += `<tr>
-            <td> ${item.modele} </td>
+            <td> ${item.modele}</td>
             <td> ${item.couleur}</td>
             <td> ${item.stockage}</td>
             <td> ${item.dansPanier}</td>
-            <td> ${item.assurance} </td>
+            <td> ${item.assurance}</td>
+            <td> ${item.prix}/u</td>
             <td> <img src="../images/cross_icon.png" class="btn-supprimer" alt="Logo du supprimer" /> </td>
             </tr>`;
         });
+        document.querySelector('#totale').textContent = `Prix total : ${prixTotal}€`;
     }
 }
 

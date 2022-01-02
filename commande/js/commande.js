@@ -12,7 +12,7 @@ let produit = {
     couleur: document.getElementById('couleur-select').value,
     stockage: document.getElementById('stockage-select').value,
     assurance: document.querySelector('#assuranceFW').checked,
-    prix : document.getElementById('prixchange'),
+    prix : document.getElementById('prixchange').innerHTML,
     dansPanier: 0
 };
 
@@ -20,14 +20,13 @@ cart.addEventListener('click', () => {
     produit.modele = document.getElementById('modele-select').value;
     produit.couleur = document.getElementById('couleur-select').value;
     produit.stockage = document.getElementById('stockage-select').value;
+    produit.prix = document.getElementById('prixchange').innerHTML;
     produit.assurance = document.querySelector('#assuranceFW').checked;
     if (produit.assurance){
         produit.assurance = "Oui";
-        produit.prix = document.getElementById('prixchange').innerHTML + 109.99;
     }
     else {
         produit.assurance = "Non";
-        produit.prix = document.getElementById('prixchange').innerHTML;
     }
 
     nbElementPanier(produit);
@@ -38,7 +37,7 @@ for (let i = 0; i < selects.length; i++) {
     selects.item(i).addEventListener('change', () => {
 
         let prixModele = 809;
-        switch (document.getElementById('modele-select').value) {
+        switch (choixmodele.value) {
             case 'iPhone 13 Mini':
                 break;
             case 'iPhone 13':
@@ -53,7 +52,7 @@ for (let i = 0; i < selects.length; i++) {
         }
 
         let prixStockage = 0;
-        switch (document.getElementById('stockage-select').value) {
+        switch (choixstock.value) {
             case '256Go':
                 prixStockage = 100;
                 break;
@@ -65,7 +64,14 @@ for (let i = 0; i < selects.length; i++) {
                 break;
         }
 
-        let prix = prixModele + prixStockage;
+        let prixAssurance = 0;
+        produit.assurance = document.querySelector('#assuranceFW').checked;
+
+        if (produit.assurance){
+            prixAssurance = 109.99;
+        }
+
+        let prix = prixModele + prixStockage + prixAssurance;
         document.querySelector('#prixchange').textContent = `${prix}€`;
     })
 }
@@ -82,6 +88,7 @@ function nbElementPanier(produit) {
     }
     verifItem(produit);
 }
+
 function verifItem(produit){
     let cartItems = localStorage.getItem('ProduitDansPanier');
     let trouver = false;
@@ -119,5 +126,5 @@ function estMemeProduit(produitA, produitB){
 
 //On doit ajouter les prix de chaque modèle afin de pouvoir afficher un panier complet
 function CoutTotal(produit) {
-    console.log("Le prix du produit est : ", produit);
+    console.log("Le prix du produit est : ", produit.prix);
 }
