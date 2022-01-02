@@ -12,6 +12,7 @@ let produit = {
     couleur: document.getElementById('couleur-select').value,
     stockage: document.getElementById('stockage-select').value,
     assurance: document.querySelector('#assuranceFW').checked,
+    prix : document.getElementById('prixchange'),
     dansPanier: 0
 };
 
@@ -22,9 +23,11 @@ cart.addEventListener('click', () => {
     produit.assurance = document.querySelector('#assuranceFW').checked;
     if (produit.assurance){
         produit.assurance = "Oui";
+        produit.prix = document.getElementById('prixchange').innerHTML + 109.99;
     }
     else {
         produit.assurance = "Non";
+        produit.prix = document.getElementById('prixchange').innerHTML;
     }
 
     nbElementPanier(produit);
@@ -33,7 +36,6 @@ cart.addEventListener('click', () => {
 
 for (let i = 0; i < selects.length; i++) {
     selects.item(i).addEventListener('change', () => {
-        console.log("in");
 
         let prixModele = 809;
         switch (document.getElementById('modele-select').value) {
