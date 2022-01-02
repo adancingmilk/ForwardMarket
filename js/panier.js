@@ -1,10 +1,11 @@
 let btns_suppr = document.getElementsByClassName("btn-supprimer");
-let prixTotal = 0;
+
 function displayPanier() {
     let cartItems = localStorage.getItem("ProduitDansPanier");
     cartItems = JSON.parse(cartItems);
     let ItemProduit = document.querySelector(".Panier");
     if (cartItems && ItemProduit) {
+        let prixTotal = 0;
         Object.values(cartItems).map(item => {
             prixTotal += parseFloat(item.prix)*parseInt(item.dansPanier);
             ItemProduit.innerHTML += `<tr>
@@ -17,8 +18,17 @@ function displayPanier() {
             <td> <img src="../images/cross_icon.png" class="btn-supprimer" alt="Logo du supprimer" /> </td>
             </tr>`;
         });
-        document.querySelector('#totale').textContent = `Prix total : ${prixTotal}€`;
+        document.querySelector('#total').textContent = `Prix total : ${prixTotal}€`;
     }
+}
+function prixTotal(){
+    let cartItems = localStorage.getItem("ProduitDansPanier");
+    cartItems = JSON.parse(cartItems);
+    let prixTotal = 0;
+    Object.values(cartItems).map(item =>{
+        prixTotal += parseFloat(item.prix)*parseInt(item.dansPanier);
+    })
+    document.querySelector('#total').textContent = `Prix total : ${prixTotal}€`;
 }
 
 displayPanier();
@@ -43,6 +53,7 @@ for (let i = 0; i < btns_suppr.length; i++) {
         delete cartItems[j];
         console.log(cartItems);
         localStorage.setItem("ProduitDansPanier", JSON.stringify(cartItems));
-
+        prixTotal();
     });
 }
+
