@@ -20,12 +20,14 @@
 .container img {
     width: 300px;
 }
+
 #prix {
     margin: 0;
     font-size: 30px;
     display: flex;
     position: absolute;
 }
+
 #prixchange {
     position: relative;
     margin: 0;
@@ -33,6 +35,7 @@
     display: flex;
     justify-content: center;
 }
+
 #euro {
     position: absolute;
     margin: 0;
@@ -44,11 +47,13 @@
 form {
     margin-top: 3rem;
 }
+
 .couleur,.modele, .stockage, .assurance {
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 20px;
 }
+
 #modele-select, #stockage-select, #couleur-select {
     margin-left: 3rem;
     border: none;
@@ -56,4 +61,18 @@ form {
     text-align: center;
     width: 15rem;
     background-color: lightgrey;
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .select-label {
+        width: 6em;
+    }
+
+    #modele-select, #stockage-select, #couleur-select {
+        width: 20rem;
+    }
 }
