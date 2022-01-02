@@ -1,7 +1,11 @@
 let cart = document.querySelector('#btn-ajout');
+let selects = document.getElementsByClassName("selecteur");
+let choixmodele = document.getElementById('modele-select');
+let choixstock = document.getElementById('stockage-select');
 let len = localStorage.getItem('ProduitDansPanier');
 len = JSON.parse(len);
 let index = len === null ? 0 : Object.keys(len).length;
+
 
 let produit = {
     modele: document.getElementById('modele-select').value,
@@ -22,9 +26,47 @@ cart.addEventListener('click', () => {
     else {
         produit.assurance = "Non";
     }
+
     nbElementPanier(produit);
     CoutTotal(produit);
 })
+
+for (let i = 0; i < selects.length; i++) {
+    selects.item(i).addEventListener('change', () => {
+        console.log("in");
+
+        let prixModele = 809;
+        switch (document.getElementById('modele-select').value) {
+            case 'iPhone 13 Mini':
+                break;
+            case 'iPhone 13':
+                prixModele = prixModele + 100;
+                break;
+            case 'iPhone 13 Pro':
+                prixModele = prixModele + 350;
+                break;
+            case 'iPhone 13 Pro Max':
+                prixModele = prixModele + 450;
+                break;
+        }
+
+        let prixStockage = 0;
+        switch (document.getElementById('stockage-select').value) {
+            case '256Go':
+                prixStockage = 100;
+                break;
+            case '512Go':
+                prixStockage = 200;
+                break;
+            case '1To':
+                prixStockage = 300;
+                break;
+        }
+
+        let prix = prixModele + prixStockage;
+        document.querySelector('#prixchange').textContent = `${prix}€`;
+    })
+}
 
 function nbElementPanier(produit) {
     let nb = localStorage.getItem('nbElements');

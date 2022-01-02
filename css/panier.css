@@ -8,3 +8,24 @@
     width: 32px;
     cursor: pointer;
 }
+@media screen and (max-width: 500px) {
+    main {
+        margin-right: 0;
+    }
+
+    h1, h2, h3 {
+        text-align: center;
+    }
+
+    .aboutImages {
+        flex-direction: column;
+    }
+
+    .contentCreateur {
+        margin-bottom: 2em;
+    }
+
+    .desc {
+        text-align: center;
+    }
+}

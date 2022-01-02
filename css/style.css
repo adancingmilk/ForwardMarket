@@ -99,6 +99,13 @@ footer div {
 .copyrightText {
     margin-top: 1em;
 }
+a{
+    color: black;
+}
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
 
 .divAboutUs {
     margin-bottom: 1em;

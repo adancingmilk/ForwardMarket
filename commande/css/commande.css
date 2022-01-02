@@ -20,7 +20,26 @@
 .container img {
     width: 300px;
 }
-
+#prix {
+    margin: 0;
+    font-size: 30px;
+    display: flex;
+    position: absolute;
+}
+#prixchange {
+    position: relative;
+    margin: 0;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+#euro {
+    position: absolute;
+    margin: 0;
+    font-size: 30px;
+    display: flex;
+    justify-content: right;
+}
 
 form {
     margin-top: 10rem;

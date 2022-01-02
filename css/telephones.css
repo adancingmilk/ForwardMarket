@@ -3,16 +3,6 @@
     text-align: center;
 }
 
-.commander {
-    text-decoration: underline;
-    color: black;
-}
-
-.commander:hover {
-    text-decoration: underline;
-    color: grey;
-}
-
 .others-bottom {
     background-color: black;
     color: white;
@@ -36,11 +26,6 @@
 button{
     position: center;
 }
-
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
 
 .textPhone {
     display: flex;
