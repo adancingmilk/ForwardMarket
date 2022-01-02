@@ -3,7 +3,11 @@
     background-color: #ff5959;
 
 }
-
+#total {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
 .btn-supprimer {
     width: 32px;
     cursor: pointer;
