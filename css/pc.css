@@ -44,11 +44,7 @@
 
 @media screen and (max-width: 500px) {
     .subContentPC {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         flex-direction: column;
-        margin-bottom: 3em;
     }
 
     td, th {
@@ -64,14 +60,11 @@
     }
 
     .textPC {
-        display: flex;
-        flex-direction: column;
         width: auto;
     }
 
     .imgPC {
         width: 100%;
-        height: fit-content;
     }
 
     h1, h2, h3 {
