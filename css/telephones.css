@@ -54,11 +54,7 @@ button{
 
 @media screen and (max-width: 500px) {
     .subContentPhone {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         flex-direction: column;
-        margin-bottom: 3em;
     }
 
     td, th {
@@ -70,14 +66,11 @@ button{
     }
 
     .textPhone {
-        display: flex;
-        flex-direction: column;
         width: auto;
     }
 
     .imgPhone {
         width: 100%;
-        height: fit-content;
     }
 
     h1, h2, h3 {
