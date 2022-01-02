@@ -6,7 +6,7 @@ function displayPanier() {
     let ItemProduit = document.querySelector(".Panier");
     if (cartItems && ItemProduit) {
         Object.values(cartItems).map(item => {
-            prixTotal += parseInt(item.prix)*parseInt(item.dansPanier);
+            prixTotal += parseFloat(item.prix)*parseInt(item.dansPanier);
             ItemProduit.innerHTML += `<tr>
             <td> ${item.modele}</td>
             <td> ${item.couleur}</td>
