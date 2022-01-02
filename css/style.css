@@ -102,10 +102,12 @@ footer div {
 a{
     color: black;
 }
-a:link { text-decoration: none; }
+a:link {
+    text-decoration: none;
+}
 a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
+a:active { text-decoration: none;}
 
 .divAboutUs {
     margin-bottom: 1em;
@@ -116,7 +118,7 @@ a:active { text-decoration: none; }
 }
 
 table{
-    margin: 3rem 2rem;
+    margin: 8rem 2rem;
     width: 95%;
     text-align: center;
     align-items: center;
